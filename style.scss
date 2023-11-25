@@ -1,0 +1,160 @@
+$font-stack: 'Open Sans', sans-serif;
+$font-color-1: #18181b;
+$font-color-2: #f1f5f9;
+$bg-color-1: #f59e0b;
+$bg-color-2: #ef4444;
+$bg-color-3: #f5f5f5;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background: radial-gradient(circle, rgba(251,191,36,1) 0%, rgba(251,113,133,1) 100%);
+}
+
+.main-container {
+  background-image: url(https://i.ibb.co/BG5zH67/Untitled-Artwork.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: contain;
+  height: 80vh;
+  width: 90vw;
+  margin: 50px auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #0f172a;
+  color: $font-color-2;
+  gap: 10px;
+  height: 7%;
+  padding: 5px 10px 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  border-radius: 5px 5px 0 0;
+  
+  .language {
+    width: 80px;
+
+    select {
+     background-color: transparent; 
+     border-style: none;
+     color: $font-color-2;
+    }
+  }
+
+  .sign-up-button {
+    background-color: $bg-color-1;
+    color: $font-color-1;
+    padding: 5px 8px 5px 8px;
+    border-radius: 5px;
+    align-self: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.content {
+  width: 70vw;
+  margin-top: 100px;
+  padding-left: 50px;
+
+  p:first-child {
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+
+  p:last-child {
+    padding-bottom: 50px;
+  }
+
+  .search-bar {
+    border-radius: 5px;
+    display: inline-flex;
+    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+    
+    .search-input {
+      background-color: $bg-color-3;
+      padding: 10px 0 10px 10px;
+      border-radius: 5px 0 0 5px;
+      height: 40px;
+      width: 300px;
+      position: relative;
+
+      input {
+        background-color: transparent;
+        border-style: none;
+        font-size: 1rem;
+        margin-right: -4px;
+      
+        &:focus {
+          outline: none;
+        }
+      } 
+
+      svg {
+        margin-bottom: -5px;
+        position: absolute;
+        right: 5px;
+      }
+    }
+
+    button {
+        border-style: none;
+        padding: 10px;
+        border-radius: 0 5px 5px 0;;
+        background-color: $bg-color-2;
+        color: $font-color-2;
+        text-transform: uppercase;
+        cursor: pointer;
+        height: 40px;
+    }
+    
+  }
+}
+
+.footer {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  background-color: $bg-color-3;
+  font-size: 0.8rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  .footer-left {
+    display: flex;
+    gap: 15px;
+  }
+
+  .footer-middle {
+    text-align: center;
+  }
+
+  .footer-right {
+    // text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+    align-items: center;
+
+    svg {
+      
+    }
+  }
+}
