@@ -20,7 +20,6 @@ body {
   background-image: url(https://i.ibb.co/BG5zH67/Untitled-Artwork.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: contain;
   height: 80vh;
   width: 90vw;
   margin: 50px auto;
@@ -65,7 +64,7 @@ body {
 }
 
 .content {
-  width: 70vw;
+  width: 55vw;
   margin-top: 100px;
   padding-left: 50px;
 
@@ -89,7 +88,8 @@ body {
       padding: 10px 0 10px 10px;
       border-radius: 5px 0 0 5px;
       height: 40px;
-      width: 300px;
+      max-width: 300px;
+      min-width: 250px;
       position: relative;
 
       input {
@@ -125,7 +125,6 @@ body {
 }
 
 .footer {
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -136,6 +135,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  border-radius: 0 0 5px 5px;
 
   .footer-left {
     display: flex;
@@ -147,14 +147,63 @@ body {
   }
 
   .footer-right {
-    // text-align: right;
     display: flex;
     flex-direction: row-reverse;
     gap: 8px;
     align-items: center;
+  }
+}
 
-    svg {
-      
+@media only screen and (max-width: 768px) {
+  .main-container {
+    width: 90vw;
+    height: 90vh;
+    margin: 25px auto;
+    background-size: auto 100%;
+    border-radius: 5px;
+  }
+  
+  .footer {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+    font-size: 0.6rem;
+
+    .footer-left {
+      width: 100%;
+      grid-column: 1 / span 2;
+    }
+
+    .footer-middle {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .main-container {
+    width: 95vw;
+    height: 95vh;
+    margin: 25px auto;
+  }
+
+  .content {
+    .title {
+      p:first-child {
+        font-size: 1.5rem;
+      }
+    }
+
+    .search-bar {
+      flex-direction: column;
+      align-self: center;
+  
+      .search-input {
+        border-radius: 5px 5px 0 0;
+      }
+  
+      button {
+        border-radius: 0 0 5px 5px;
+      }
     }
   }
 }
